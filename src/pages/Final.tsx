@@ -1,8 +1,41 @@
-import { FunctionComponent } from "react";
+import { FunctionComponent,useState } from "react";
 import ServiceCardSet from "../components/ServiceCardSet";
 import FrameComponent2 from "../components/FrameComponent2";
+// import Dropdown from 'rsuite/Dropdown'; 
+import 'rsuite/dist/rsuite.min.css'; 
+import { Dropdown } from 'react-bootstrap';
+
 
 const Final: FunctionComponent = () => {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
+
+  const handleMouseEnterDropdown = () => {
+    setIsDropdownOpen(true);
+  };
+
+  const handleMouseLeaveDropdown = () => {
+    setTimeout(() => {
+      setIsDropdownOpen(false);
+      setIsSubmenuOpen(false);
+    }, 200); // Add a slight delay to improve hover experience
+  };
+
+  const handleMouseEnterSubmenu = () => {
+    setIsSubmenuOpen(true);
+  };
+
+  const handleMouseLeaveSubmenu = () => {
+    setTimeout(() => {
+      setIsSubmenuOpen(false);
+    }, 200); // Add a slight delay to improve hover experience
+  };
+
+  const handleSubmenuClick = () => {
+    // Add more logic here, e.g., navigating to a different page
+  };
+
+
   return (
     <div className="w-full relative bg-white h-[5866px] overflow-hidden text-left text-base text-white font-sf-pro-display">
       <div className="absolute top-[0px] left-[calc(50%_-_720px)] bg-white w-[1440px] h-[142px] text-black font-lato">
@@ -18,12 +51,83 @@ const Final: FunctionComponent = () => {
               <div className="relative leading-[26px]">Director's Message</div>
             </div>
           </div>
-          <div className="h-[42px] flex flex-col items-start justify-start">
+          {/* <div className="h-[42px] flex flex-col items-start justify-start">
             <div className="w-[109.7px] relative h-[42px]">
-              <div className="absolute top-[7.5px] left-[15px] leading-[26px] flex items-center w-[67.8px] h-[26px]">{`Products `}</div>
-              <div className="absolute top-[17.9px] left-[86.7px] box-border w-2 h-1 border-t-[4px] border-solid border-black1 border-r-[4px] border-l-[4px]" />
+              <div className="absolute top-[7.5px] left-[15px] leading-[26px] flex items-center w-[67.8px] h-[26px]">{`Products `}
+              <div className="pl-1">
+                <img width="15" height="15" src="https://img.icons8.com/ios-glyphs/30/sort-down.png" alt="sort-down"/>
+              </div>
+              </div>
             </div>
+          </div> */}
+            <div className="h-[42px] flex flex-col items-start justify-start">
+      <div
+        className="w-[109.7px] relative h-[42px]"
+        onMouseEnter={handleMouseEnterDropdown}
+        onMouseLeave={handleMouseLeaveDropdown}
+      >
+        <div
+          className="absolute top-[7.5px] left-[15px] leading-[26px] flex items-center w-[67.8px] h-[26px] cursor-pointer"
+        >
+          Products
+          <div className="pl-1">
+            <img
+              width="15"
+              height="15"
+              src="https://img.icons8.com/ios-glyphs/30/sort-down.png"
+              alt="sort-down"
+            />
           </div>
+        </div>
+        {isDropdownOpen && (
+          <div className="absolute top-[35px] left-0 w-[150px] bg-white shadow-lg z-10">
+            <ul className="">
+              <li
+                className="relative pl-4 px-4 py-2 "
+                onMouseEnter={handleMouseEnterSubmenu}
+                onMouseLeave={handleMouseLeaveSubmenu}
+              >
+                Product 1
+                {/* {isSubmenuOpen && (
+                  <ul className="absolute top-0 left-[150px] w-[150px] bg-white shadow-lg z-10 py-1">
+                    <li
+                      className="pl-4 px-4 py-2 hover:bg-gray-200 cursor-pointer"
+                      onClick={() => handleSubmenuClick('Subproduct 1')}
+                    >
+                      Subproduct 1
+                    </li>
+                    <li
+                      className="pl-4 px-4 py-2 hover:bg-gray-200 cursor-pointer"
+                      onClick={() => handleSubmenuClick('Subproduct 2')}
+                    >
+                      Subproduct 2
+                    </li>
+                    <li
+                      className="pl-4 px-4 py-2 hover:bg-gray-200 cursor-pointer"
+                      onClick={() => handleSubmenuClick('Subproduct 3')}
+                    >
+                      Subproduct 3
+                    </li>
+                  </ul>
+                )} */}
+              </li>
+              <li
+                className="pl-4 px-4 py-2 hover:bg-gray-200 cursor-pointer"
+                onClick={() => handleSubmenuClick()}
+              >
+                Product 2
+              </li>
+              <li
+                className="pl-4 px-4 py-2 hover:bg-gray-200 cursor-pointer"
+                onClick={() => handleSubmenuClick()}
+              >
+                Product 3
+              </li>
+            </ul>
+          </div>
+        )}
+      </div>
+    </div>
           <div className="h-[42px] flex flex-col items-start justify-start">
             <div className="self-stretch flex flex-col items-start justify-start py-2 px-[15px]">
               <div className="relative leading-[26px]">{`Services & Support`}</div>
@@ -31,14 +135,20 @@ const Final: FunctionComponent = () => {
           </div>
           <div className="h-[42px] flex flex-col items-start justify-start">
             <div className="w-[95.4px] relative h-[42px]">
-              <div className="absolute top-[7.5px] left-[15px] leading-[26px] flex items-center w-[53.6px] h-[26px]">{`Career `}</div>
-              <div className="absolute top-[17.9px] left-[72.4px] box-border w-2 h-1 border-t-[4px] border-solid border-black1 border-r-[4px] border-l-[4px]" />
+              <div className="absolute top-[7.5px] left-[15px] leading-[26px] flex items-center w-[53.6px] h-[26px]">{`Career `}
+              <div className="pl-1">
+                <img width="15" height="15" src="https://img.icons8.com/ios-glyphs/30/sort-down.png" alt="sort-down"/>
+              </div>
+            </div>
             </div>
           </div>
           <div className="h-[42px] flex flex-col items-start justify-start">
             <div className="w-[97.2px] relative h-[42px]">
-              <div className="absolute top-[7.5px] left-[15px] leading-[26px] flex items-center w-[55.3px] h-[26px]">{`Gallery `}</div>
-              <div className="absolute top-[17.9px] left-[74.2px] box-border w-2 h-1 border-t-[4px] border-solid border-black1 border-r-[4px] border-l-[4px]" />
+              <div className="absolute top-[7.5px] left-[15px] leading-[26px] flex items-center w-[55.3px] h-[26px]">{`Gallery `}
+              <div className="pl-1">
+                <img width="15" height="15" src="https://img.icons8.com/ios-glyphs/30/sort-down.png" alt="sort-down"/>
+              </div>
+              </div>
             </div>
           </div>
           <div className="h-[42px] flex flex-col items-start justify-start">
@@ -713,13 +823,13 @@ const Final: FunctionComponent = () => {
             alt=""
             src="/group-1000001925@2x.png"
           />
-          <div className="w-[1440px] relative bg-white h-[536px] overflow-hidden shrink-0 text-left text-sm text-dark">
-            <div className="absolute h-[78.36%] top-[13.81%] bottom-[7.84%] left-[calc(50%_-_619px)] w-[1237px]">
+          <div className="w-[1440px] relative bg-white h-[540px] overflow-hidden shrink-0 text-left text-sm text-dark">
+            <div className="absolute h-[78.36%] top-[5.81%] bottom-[7.84%] left-[calc(50%_-_619px)] w-[1237px]">
               <div className="absolute h-full top-[0%] bottom-[0%] left-[calc(50%_-_618.5px)] w-[1237px]">
                 <div className="absolute h-full top-[0%] bottom-[0%] left-[calc(50%_-_618.5px)] w-[1237px]">
                   <div className="absolute h-[0.48%] top-[90%] bottom-[9.52%] left-[calc(50%_-_618.5px)] bg-dark box-border w-[1238px] opacity-[0.2] mix-blend-normal border-[1px] border-solid border-darkgray" />
                   <div className="absolute top-[calc(50%_+_193px)] left-[calc(50%_-_176.5px)] text-center opacity-[0.65] mix-blend-normal">
-                    © 2024 | Bet Medical | IcebergMalav | All Rights Reserved
+                  © 2024 | Bet Medical | IcebergMalav | All Rights Reserved
                   </div>
                   <div className="absolute top-[0px] left-[345px] text-xl font-semibold">
                     Useful Links
