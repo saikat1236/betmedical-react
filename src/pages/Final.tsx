@@ -40,10 +40,10 @@ const Final: FunctionComponent = () => {
     <div className="w-full relative bg-white h-[5866px] overflow-hidden text-left text-base text-white font-sf-pro-display">
       <div className="absolute top-[0px] left-[calc(50%_-_720px)] bg-white w-[1440px] h-[142px] text-black font-lato">
         <div className="absolute top-[0px] left-[2px] shadow-[4px_8px_16px_rgba(0,_0,_0,_0.03)] bg-white box-border w-[1440px] h-[142px] border-b-[1px] border-solid border-gainsboro-100" />
-        <div className="absolute top-[calc(50%_+_3px)] left-[456px] flex flex-row items-start justify-start gap-[3px] text-black1 font-segoe-ui">
+        <div className="absolute top-[calc(50%_+_3px)] left-[456px] flex flex-row items-start justify-start gap-[3px] text-black1 ">
           <div className="h-[42px] flex flex-col items-start justify-start">
             <div className="self-stretch flex flex-col items-start justify-start py-2 px-[15px]">
-              <div className="relative leading-[26px]">Home</div>
+              <div className="relative leading-[26px] ">Home</div>
             </div>
           </div>
           <div className="h-[42px] flex flex-col items-start justify-start">
@@ -336,7 +336,7 @@ const Final: FunctionComponent = () => {
           />
           <div className="!m-[0] absolute top-[calc(50%_-_60.4px)] left-[calc(50%_-_304px)] flex flex-col items-center justify-start gap-[16px] z-[1]">
             <b className="relative leading-[50.67px]">MISSION</b>
-            <div className="w-[608px] relative h-[54px] text-xl text-black1 font-lato">
+            <div className="w-[608px] relative h-[54px] text-xl text-white font-lato">
               <div className="absolute top-[5.9px] left-[96px] bg-primary w-3 h-[17px]" />
               <div className="absolute top-[0px] left-[calc(50%_-_304px)] leading-[27.15px] flex items-center w-[608px] h-[54px]">
                 <span className="w-full">
@@ -719,7 +719,7 @@ const Final: FunctionComponent = () => {
                       labore et dolore magna aliquaLorem ipsum dolor sit amet,
                     </div>
                     <div className="w-[230px] rounded-lg bg-primary h-[52px] overflow-hidden shrink-0 flex flex-row items-center justify-center py-[18px] px-[25px] box-border text-xl text-white font-roboto">
-                      <div className="relative leading-[130%] font-semibold">
+                      <div className="relative leading-[130%] font-lato font-semibold">
                         Watch More Videos
                       </div>
                     </div>
@@ -950,9 +950,9 @@ const Final: FunctionComponent = () => {
           </div>
         </div>
       </div>
-      <div className="absolute top-[141px] left-[calc(50%_-_720px)] w-[1440px] overflow-hidden flex flex-col items-center justify-center py-[230px] px-[331px] box-border bg-[url('/public/frame-292397@3x.png')] bg-cover bg-no-repeat bg-[top] text-[44px]">
+      <div className="absolute top-[141px] left-[calc(50%_-_765px)] w-[1530px] overflow-hidden flex flex-col items-center justify-center py-[230px] px-[331px] box-border bg-[url('/public/frame-292397@3x.png')] bg-cover bg-no-repeat bg-[top] text-[4px]">
         <div className="flex flex-col items-center justify-start gap-[25px]">
-          <b className="relative leading-[26px]">{`Endonaut Fusion Imaging & Navigation`}</b>
+          <h1 className="relative leading-[26px]">Endonaut Fusion Imaging & Navigation</h1>
           <div className="w-[740px] relative text-[22px] leading-[32px] font-lato text-center flex items-center justify-center">
             Make your or ready for new challenges with Endonaut, unique image
             fusion systems compatible with any imaging modality and C-arm

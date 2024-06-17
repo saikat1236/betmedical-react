@@ -39,10 +39,10 @@ module.exports = {
       },
       spacing: {},
       fontFamily: {
-        lato: "Lato",
-        "sf-pro-display": "'SF Pro Display'",
+        "lato": "Lato",
+        // "sf-pro-display": "'SF Pro Display'",
         "helvetica-neue": "'Helvetica Neue'",
-        roboto: "Roboto",
+        "roboto": "Roboto",
         "segoe-ui": "'Segoe UI'",
       },
       borderRadius: {
