@@ -63,6 +63,17 @@ module.exports = {
       "13xl": "32px",
       inherit: "inherit",
     },
+    screens: {
+      'sm': {'min': '0px', 'max': '932px'},
+      // => @media (min-width: 640px and max-width: 767px) { ... }
+
+      'md': {'min': '933px', 'max': '1023px'},
+      // => @media (min-width: 768px and max-width: 1023px) { ... }
+
+
+      'lg': {'min': '1024px', 'max': '1279px'},
+      // => @media (min-width: 1024px and max-width: 1279px) { ... }
+    }
   },
   corePlugins: {
     preflight: false,

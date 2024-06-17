@@ -37,7 +37,7 @@ const Final: FunctionComponent = () => {
 
 
   return (
-    <div className="w-full relative bg-white h-[5866px] overflow-hidden text-left text-base text-white font-sf-pro-display">
+    <div className="w-full relative bg-white h-[7866px] overflow-hidden text-left text-base text-white font-sf-pro-display">
       <div className="absolute top-[0px] left-[calc(50%_-_720px)] bg-white w-[1440px] h-[142px] text-black font-lato">
         <div className="absolute top-[0px] left-[2px] shadow-[4px_8px_16px_rgba(0,_0,_0,_0.03)] bg-white box-border w-[1440px] h-[142px] border-b-[1px] border-solid border-gainsboro-100" />
         <div className="absolute top-[calc(50%_+_3px)] left-[456px] flex flex-row items-start justify-start gap-[3px] text-black1 ">
@@ -294,12 +294,8 @@ const Final: FunctionComponent = () => {
             src="/group-1000001877@2x.png"
           />
         </div>
-        <div className="flex flex-row items-start justify-start gap-[40px] text-13xl text-gray1-200">
-          <img
-            className="w-[515px] relative h-[374px] object-cover"
-            alt=""
-            src="/group-292565@2x.png"
-          />
+        <div className="flex flex-row items-start justify-start text-13xl text-gray1-200 grid grid-cols-2 sm:grid-cols-1">
+            <img className="w-[515px] h-[374px] object-cover mx-auto" alt="" src="/group-292565@2x.png"/>
           <div className="flex flex-col items-start justify-start gap-[21px]">
             <b className="relative">About Us</b>
             <div className="w-[685px] relative text-lg leading-[130.2%] font-lato text-darkslategray-100 inline-block">
@@ -366,7 +362,7 @@ const Final: FunctionComponent = () => {
                 </b>
               </div>
             </div>
-            <div className="w-[1162px] flex flex-row flex-wrap items-start justify-start gap-[32px] text-xl">
+            <div className="gap-[32px] text-xl grid grid-cols-3 sm:grid-cols-1">
               <div className="flex flex-col items-start justify-start gap-[16px]">
                 <div className="w-[366px] relative h-56">
                   <div className="absolute top-[0px] left-[0px] rounded-lg bg-whitesmoke-100 w-[366px] h-56" />
@@ -719,7 +715,7 @@ const Final: FunctionComponent = () => {
                       labore et dolore magna aliquaLorem ipsum dolor sit amet,
                     </div>
                     <div className="w-[230px] rounded-lg bg-primary h-[52px] overflow-hidden shrink-0 flex flex-row items-center justify-center py-[18px] px-[25px] box-border text-xl text-white font-roboto">
-                      <div className="relative leading-[130%] font-lato font-semibold">
+                      <div className="relative leading-[130%] font-latofont-semibold">
                         Watch More Videos
                       </div>
                     </div>
@@ -785,18 +781,8 @@ const Final: FunctionComponent = () => {
               <div className="flex flex-col items-start justify-start">
                 <div className="relative leading-[24px] font-semibold">{`Related Videos `}</div>
               </div>
-              <div className="w-[1264px] overflow-hidden flex flex-row items-start justify-start gap-[32px]">
+              <div className="w-[1264px] overflow-hidden flex flex-row items-start justify-start gap-[32px] grid grid-cols-3 sm:grid-cols-1">
                 <FrameComponent2 rectangle5349="/rectangle-5349@2x.png" />
-                <FrameComponent2
-                  rectangle5349="/rectangle-5349@2x.png"
-                  propLineHeight="unset"
-                  propLineHeight1="unset"
-                />
-                <FrameComponent2
-                  rectangle5349="/rectangle-5349@2x.png"
-                  propLineHeight="unset"
-                  propLineHeight1="unset"
-                />
                 <FrameComponent2
                   rectangle5349="/rectangle-5349@2x.png"
                   propLineHeight="unset"
@@ -950,7 +936,7 @@ const Final: FunctionComponent = () => {
           </div>
         </div>
       </div>
-      <div className="absolute top-[141px] left-[calc(50%_-_765px)] w-[1530px] overflow-hidden flex flex-col items-center justify-center py-[230px] px-[331px] box-border bg-[url('/public/frame-292397@3x.png')] bg-cover bg-no-repeat bg-[top] text-[4px]">
+      <div className="absolute top-[141px] left-[calc(50%_-_765px)] w-[1530px] overflow-hidden flex flex-col items-center justify-center py-[230px] px-[331px] box-border bg-[url('frame-292397@3x.png')] bg-cover bg-no-repeat bg-[top] text-[4px]">
         <div className="flex flex-col items-center justify-start gap-[25px]">
           <h1 className="relative leading-[26px]">Endonaut Fusion Imaging & Navigation</h1>
           <div className="w-[740px] relative text-[22px] leading-[32px] font-lato text-center flex items-center justify-center">
